@@ -1,6 +1,6 @@
 import { db } from "~/server/db";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
 
@@ -10,7 +10,7 @@ export default async function HomePage() {
 
   return (
     <main className="">
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 p-4">
         {
           [...images, ...images, ...images].map((image, index) => (
             <div className="w-48" key={image.id + "-" + index}>
